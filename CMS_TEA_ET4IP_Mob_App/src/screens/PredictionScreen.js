@@ -1,18 +1,19 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import PredictionRow from '../commons/components/PredictionRow';
+import {FONT_STYLES} from '../commons/styles/main-styles';
 
-export default () => {
+export default ({navigation}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
-      <Text style={LOCAL_STYLES.TITLE_TEXT}>Predictable Behaviours</Text>
+      <Text style={FONT_STYLES.PAGE_TITLE}>Predictable Behaviours</Text>
       <FlatList
         contentContainerStyle={LOCAL_STYLES.LIST_STYLE}
         data={[0, 1, 2, 3]}
         renderItem={({item}) => (
           <PredictionRow
             onPress={() => {
-              console.log(item);
+              navigation.navigate('TraceCategoriesScreen');
             }}
           />
         )}
@@ -32,6 +33,5 @@ const LOCAL_STYLES = StyleSheet.create({
   },
   LIST_STYLE: {
     width: 400,
-    backgroundColor: '#F0F',
   },
 });
