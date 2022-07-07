@@ -6,6 +6,12 @@ export default ({navigation}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <Button
+        title="Make a Post"
+        onPress={() => {
+          navigation.navigate('MakePostScreen');
+        }}
+      />
+      <Button
         title="Check your Privacy Data-Traces"
         onPress={() => {
           navigation.navigate('OverviewScreen');
@@ -13,6 +19,7 @@ export default ({navigation}) => {
       />
 
       <FlatList
+        contentContainerStyle={LOCAL_STYLES.LIST_STYLE}
         data={[1, 2, 3]}
         renderItem={({item}) => (
           <Button title={item.toString()} onPress={() => console.log(item)} />
@@ -26,5 +33,8 @@ const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
     ...MAIN_STYLES.CENTER_CONTENT,
+  },
+  LIST_STYLE: {
+    flexDirection: 'row',
   },
 });
