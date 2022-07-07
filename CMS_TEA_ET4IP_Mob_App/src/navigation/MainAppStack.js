@@ -6,6 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LandingScreen from '../screens/LandingScreen';
 import OverviewScreen from '../screens/OverviewScreen';
 import PredictionScreen from '../screens/PredictionScreen';
+import TraceCategoriesScreen from '../screens/TraceCategoriesScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +19,7 @@ export default () => {
       <Stack.Screen name="LandingScreen" component={LandingScreen} />
       <Stack.Screen name="OverviewScreen" component={OverviewScreen} />
       <Stack.Screen name="PredictionScreen" component={PredictionScreen} />
+      <Stack.Screen name="TraceCategoriesScreen" component={TraceCategoriesScreen} />
     </Stack.Navigator>
   );
 };
