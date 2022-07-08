@@ -6,6 +6,7 @@ import {widthPercentageToDP as WP} from 'react-native-responsive-screen';
 import DataOverviewGraph from '../commons/components/DataOverviewGraph';
 import PopupModal from '../commons/components/PopupModal';
 import PrivacyBadge from '../commons/components/PrivacyBadge';
+import VictoryOverview from '../commons/components/VictoryOverview';
 
 // Styles
 import {MAIN_STYLES} from '../commons/styles/main-styles';
@@ -24,7 +25,7 @@ export default ({navigation}) => {
   
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
-      <DataOverviewGraph />
+      <VictoryOverview />
       <View style={LOCAL_STYLES.BUTTON_CONTAINER}>
       <Button
           title="User"
