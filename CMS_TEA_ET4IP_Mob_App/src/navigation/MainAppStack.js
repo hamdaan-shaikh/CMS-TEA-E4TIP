@@ -8,6 +8,7 @@ import OverviewScreen from '../screens/OverviewScreen';
 import PredictionScreen from '../screens/PredictionScreen';
 import TraceCategoriesScreen from '../screens/TraceCategoriesScreen';
 import MakePostScreen from '../screens/MakePostScreen';
+import DetailedGraphScreen from '../screens/DetailedGraphScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ export default () => {
       <Stack.Screen name="PredictionScreen" component={PredictionScreen} />
       <Stack.Screen name="TraceCategoriesScreen" component={TraceCategoriesScreen} />
       <Stack.Screen name="MakePostScreen" component={MakePostScreen} />
+      <Stack.Screen name="DetailedGraphScreen" component={DetailedGraphScreen} />
     </Stack.Navigator>
   );
 };
