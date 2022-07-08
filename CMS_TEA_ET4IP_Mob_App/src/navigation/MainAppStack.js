@@ -8,7 +8,9 @@ import OverviewScreen from '../screens/OverviewScreen';
 import PredictionScreen from '../screens/PredictionScreen';
 import TraceCategoriesScreen from '../screens/TraceCategoriesScreen';
 import MakePostScreen from '../screens/MakePostScreen';
-import DetailedGraphScreen from '../screens/DetailedGraphScreen';
+import BubbleChartScreen from '../screens/BubbleChartScreen';
+import BarChartScreen from '../screens/BarChartScreen';
+import PieChartScreen from '../screens/PieChartScreen';
 import SurveyScreen from '../screens/SurveyScreen';
 
 const Stack = createNativeStackNavigator();
@@ -24,7 +26,9 @@ export default () => {
       <Stack.Screen name="PredictionScreen" component={PredictionScreen} />
       <Stack.Screen name="TraceCategoriesScreen" component={TraceCategoriesScreen} />
       <Stack.Screen name="MakePostScreen" component={MakePostScreen} />
-      <Stack.Screen name="DetailedGraphScreen" component={DetailedGraphScreen} />
+      <Stack.Screen name="BarChartScreen" component={BarChartScreen} />
+      <Stack.Screen name="PieChartScreen" component={PieChartScreen} />
+      <Stack.Screen name="BubbleChartScreen" component={BubbleChartScreen} />
       <Stack.Screen name="SurveyScreen" component={SurveyScreen} />
     </Stack.Navigator>
   );
