@@ -56,7 +56,7 @@ export default props => {
           <UserInfoRow title="Name" subtitle="Hamdaan Shaikh" />
           <UserInfoRow title="Age" subtitle="25" />
           <UserInfoRow title="Gender" subtitle="Male" />
-          <UserInfoRow title="Address" subtitle="Borsbergstrasse 34" />
+          <UserInfoRow title="Address" subtitle="Borsbergstr. 34" />
           <UserInfoRow title="Post Code" subtitle="01309" />
           <UserInfoRow title="City" subtitle="Dresden" />
           <UserInfoRow title="Country" subtitle="Germany" />
@@ -105,6 +105,6 @@ const LOCAL_STYLES = StyleSheet.create({
     ...MAIN_STYLES.CENTER_CONTENT,
   },
   RIGHT_CONTAINER: {
-    flex: 0,
+    flex: 2,
   },
 });

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 
 // Components
+import {widthPercentageToDP as WP} from 'react-native-responsive-screen';
 import DataOverviewGraph from '../commons/components/DataOverviewGraph';
 import PopupModal from '../commons/components/PopupModal';
 import PrivacyBadge from '../commons/components/PrivacyBadge';
