@@ -32,7 +32,12 @@ export default ({navigation}) => {
             toggleModal(true);
           }}
         />
-        <Button title="Take" onPress={() => {}} />
+        <Button
+          title="Survey"
+          onPress={() => {
+            navigation.navigate('SurveyScreen');
+          }}
+        />
         <Button
           title="Predictable Behaviour"
           onPress={() => {
