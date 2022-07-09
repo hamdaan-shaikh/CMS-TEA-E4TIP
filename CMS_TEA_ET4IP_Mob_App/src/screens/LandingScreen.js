@@ -1,18 +1,24 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button, FlatList} from 'react-native';
+import {View, Text, StyleSheet, FlatList} from 'react-native';
 import {MAIN_STYLES} from '../commons/styles/main-styles';
+
+import {
+  HollowButton,
+  SmallButton,
+  SolidButton,
+} from '../commons/components/Buttons';
 
 export default ({navigation}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
-      <Button
-        title="Make a Post"
+      <SolidButton
+        text="Make a Post"
         onPress={() => {
           navigation.navigate('MakePostScreen');
         }}
       />
-      <Button
-        title="Check your Privacy Data-Traces"
+      <HollowButton
+        text="Check your Privacy Data-Traces"
         onPress={() => {
           navigation.navigate('OverviewScreen');
         }}
@@ -22,7 +28,7 @@ export default ({navigation}) => {
         contentContainerStyle={LOCAL_STYLES.LIST_STYLE}
         data={[1, 2, 3]}
         renderItem={({item}) => (
-          <Button title={item.toString()} onPress={() => console.log(item)} />
+          <SmallButton title={item.toString()} onPress={() => console.log(item)} />
         )}
       />
     </View>

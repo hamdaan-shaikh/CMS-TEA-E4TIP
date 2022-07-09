@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, TextInput, Button} from 'react-native';
+import {SolidButton} from '../commons/components/Buttons';
 import {NumberInput} from '../commons/components/CustomInput';
 import {FONT_STYLES} from '../commons/styles/main-styles';
 
@@ -112,14 +113,14 @@ export default ({navigation}) => {
         placeholder={'Answer fifth'}
         lastFormElement={true}
       />
-      <Button
-        title="Submit"
+      <SolidButton
+        text="Submit"
         onPress={() => {
             onSubmit();
         }}
       />
-      <Button
-        title="Go back"
+      <SolidButton
+        text="Go back"
         onPress={() => {
           navigation.goBack();
         }}
