@@ -31,6 +31,7 @@ const LOCAL_STYLES = StyleSheet.create({
     flex: 1,
   },
   BUTTON_CONTAINER: {
+    elevation: 6,
     marginTop: WP('3%'),
     height: WP('15%'),
     width: WP('65%'),
@@ -39,6 +40,7 @@ const LOCAL_STYLES = StyleSheet.create({
     ...MAIN_STYLES.CENTER_CONTENT,
   },
   SMALL_BUTTON_CONTAINER: {
+    elevation: 6,
     marginTop: WP('3%'),
     height: WP('15%'),
     width: WP('20%'),

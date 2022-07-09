@@ -67,6 +67,9 @@ export default ({navigation}) => {
         ]}
       />
       <SolidButton
+          style={{
+            marginHorizontal: 5,
+          }}
           text="Survey"
           onPress={() => {
             navigation.navigate('SurveyScreen');
@@ -74,12 +77,18 @@ export default ({navigation}) => {
         />
       <View style={LOCAL_STYLES.BUTTON_CONTAINER}>
       <SmallButton
+          style={{
+            marginHorizontal: 5,
+          }}
           text="User"
           onPress={() => {
             toggleModal(true);
           }}
         />
         <SolidButton
+          style={{
+            marginHorizontal: 5,
+          }}
           text="Predictable Behaviour"
           onPress={() => {
             navigation.navigate('PredictionScreen');

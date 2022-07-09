@@ -6,6 +6,7 @@ import {widthPercentageToDP as WP} from 'react-native-responsive-screen';
 
 // Styles
 import {MAIN_STYLES} from '../styles/main-styles';
+import {COLOR2, COLOR3, COLOR4, COLOR5} from '../styles/colors';
 
 export const NumberInput = ({
   placeholder,
@@ -71,9 +72,9 @@ const LOCAL_STYLES = StyleSheet.create({
     flex: 1,
   },
   NUMBER_INPUT_CONTAINER: {
-    color: '#333',
+    color: 'COLOR4',
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'COLOR3',
     height: '100%',
     paddingHorizontal: WP('4%'),
   },

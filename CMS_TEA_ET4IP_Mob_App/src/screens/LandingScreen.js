@@ -7,7 +7,8 @@ import {
   SmallButton,
   SolidButton,
 } from '../commons/components/Buttons'; 
-import {COLOR2} from '../commons/styles/colors';
+import {COLOR2,COLOR3} from '../commons/styles/colors';
+import {heightPercentageToDP} from 'react-native-responsive-screen';
 
 export default ({navigation}) => {
   return (
@@ -26,10 +27,18 @@ export default ({navigation}) => {
       />
 
       <FlatList
+        style={{
+          maxHeight: heightPercentageToDP('30%'),
+        }}
         contentContainerStyle={LOCAL_STYLES.LIST_STYLE}
         data={[1, 2, 3]}
         renderItem={({item}) => (
-          <SmallButton title={item.toString()} onPress={() => console.log(item)} />
+          <SmallButton
+          style={{
+            maxHeight: heightPercentageToDP('30%'),
+          }}
+          title={item.toString()}
+          onPress={() => console.log(item)} />
         )}
       />
     </View>
@@ -43,6 +52,7 @@ const LOCAL_STYLES = StyleSheet.create({
     backgroundColor: COLOR2,
   },
   LIST_STYLE: {
+    flex: 1,
     flexDirection: 'row',
   },
 });

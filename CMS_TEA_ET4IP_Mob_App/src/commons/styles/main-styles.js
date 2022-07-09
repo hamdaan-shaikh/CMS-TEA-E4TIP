@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {COLOR4} from './colors';
 
 export const MAIN_STYLES = {
   CENTER_CONTENT: {
@@ -12,6 +13,6 @@ export const FONT_STYLES = {
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',
-    color: '#333',
+    color: 'COLOR4',
   },
 };
