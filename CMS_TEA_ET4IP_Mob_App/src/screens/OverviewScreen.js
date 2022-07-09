@@ -11,6 +11,7 @@ import {SmallButton, SolidButton} from '../commons/components/Buttons';
 
 // Styles
 import {MAIN_STYLES} from '../commons/styles/main-styles';
+import {COLOR2} from '../commons/styles/colors';
 
 export default ({navigation}) => {
   const [state, setState] = useState({
@@ -101,6 +102,7 @@ const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
     ...MAIN_STYLES.CENTER_CONTENT,
+    backgroundColor: COLOR2,
   },
 
   BUTTON_CONTAINER: {

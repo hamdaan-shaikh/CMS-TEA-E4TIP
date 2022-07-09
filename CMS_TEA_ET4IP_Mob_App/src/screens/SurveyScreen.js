@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, TextInput, Button} from 'react-native';
 import {SolidButton} from '../commons/components/Buttons';
 import {NumberInput} from '../commons/components/CustomInput';
 import {FONT_STYLES} from '../commons/styles/main-styles';
+import {COLOR2} from '../commons/styles/colors';
 
 const SurveyItem = ({
     value,
@@ -133,6 +134,7 @@ const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
     alignItems: 'center',
+    backgroundColor: COLOR2,
   },
 
   ITEM_CONTAINER: {},

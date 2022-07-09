@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import PredictionRow from '../commons/components/PredictionRow';
 import {FONT_STYLES} from '../commons/styles/main-styles';
+import {COLOR2} from '../commons/styles/colors';
 
 export default ({navigation}) => {
   return (
@@ -26,6 +27,7 @@ const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
     alignItems: 'center',
+    backgroundColor: COLOR2,
   },
   TITLE_TEXT: {
     fontSize: 30,

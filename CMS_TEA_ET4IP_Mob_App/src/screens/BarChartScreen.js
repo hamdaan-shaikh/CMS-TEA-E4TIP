@@ -7,6 +7,7 @@ import {widthPercentageToDP as WP} from 'react-native-responsive-screen';
 
 // Styles
 import {FONT_STYLES, MAIN_STYLES} from '../commons/styles/main-styles';
+import {COLOR2} from '../commons/styles/colors';
 
 export default props => {
   return (
@@ -26,5 +27,6 @@ const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
     ...MAIN_STYLES.CENTER_CONTENT,
+    backgroundColor: COLOR2,
   },
 });

@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Button} from 'react-native';
 import CenterModal from '../commons/components/CenterModal';
 import {FONT_STYLES} from '../commons/styles/main-styles';
 import {SmallButton, SolidButton} from '../commons/components/Buttons';
+import {COLOR2} from '../commons/styles/colors';
 
 export default ({navigation}) => {
   const [state, setState] = useState({
@@ -52,6 +53,7 @@ const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
     alignItems: 'center',
+    backgroundColor: COLOR2,
   },
   MODAL_TEXT: {
     color: '#333',

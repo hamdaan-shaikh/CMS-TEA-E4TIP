@@ -6,7 +6,8 @@ import {
   HollowButton,
   SmallButton,
   SolidButton,
-} from '../commons/components/Buttons';
+} from '../commons/components/Buttons'; 
+import {COLOR2} from '../commons/styles/colors';
 
 export default ({navigation}) => {
   return (
@@ -39,6 +40,7 @@ const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
     ...MAIN_STYLES.CENTER_CONTENT,
+    backgroundColor: COLOR2,
   },
   LIST_STYLE: {
     flexDirection: 'row',
