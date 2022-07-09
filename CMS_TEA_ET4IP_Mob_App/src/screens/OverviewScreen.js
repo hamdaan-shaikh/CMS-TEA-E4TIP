@@ -25,7 +25,45 @@ export default ({navigation}) => {
   
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
-      <VictoryOverview />
+      <VictoryOverview
+        data={[
+          {
+            activity: 'Locations',
+            score: 13,
+            onPress: () => {
+              navigation.navigate('BarChartScreen');
+            },
+          },
+          {
+            activity: 'Browsing',
+            score: 16,
+            onPress: () => {
+              navigation.navigate('BubbleChartScreen');
+            },
+          },
+          {
+            activity: 'Posts',
+            score: 14,
+            onPress: () => {
+              navigation.navigate('BubbleChartScreen');
+            },
+          },
+          {
+            activity: 'Photos',
+            score: 19,
+            onPress: () => {
+              navigation.navigate('PieChartScreen');
+            },
+          },
+          {
+            activity: 'Friends',
+            score: 19,
+            onPress: () => {
+              navigation.navigate('PieChartScreen');
+            },
+          },
+        ]}
+      />
       <View style={LOCAL_STYLES.BUTTON_CONTAINER}>
       <Button
           title="User"
