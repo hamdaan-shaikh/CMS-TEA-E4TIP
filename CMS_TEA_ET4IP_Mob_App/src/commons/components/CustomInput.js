@@ -38,6 +38,34 @@ export const NumberInput = ({
   );
 };
 
+export const MultilineInput = ({
+  value,
+  onChange,
+  onNext,
+  inputRef,
+  placeholder,
+}) => {
+  return (
+    <View style={LOCAL_STYLES.STANDARD_MULTILINE_TEXT_INPUT_CONTAINER}>
+      <TextInput
+        style={LOCAL_STYLES.STANDARD_MULTILINE_TEXT_INPUT}
+        multiline={true}
+        maxLength={500}
+        value={value}
+        onChangeText={onChange}
+        allowFontScaling={false}
+        onSubmitEditing={onNext}
+        ref={inputRef}
+        blurOnSubmit={true}
+        returnKeyType={'send'}
+        placeholder={placeholder}
+        textAlignVertical="top"
+        placeholderTextColor={'#888'}
+      />
+    </View>
+  );
+};
+
 const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
@@ -59,5 +87,18 @@ const LOCAL_STYLES = StyleSheet.create({
     borderColor: 'rgba(0,0,0,0)',
     backgroundColor: '#ddd',
     ...MAIN_STYLES.CENTER_CONTENT,
+  },
+  STANDARD_MULTILINE_TEXT_INPUT_CONTAINER: {
+    paddingHorizontal: WP('5%'),
+    color: '#333',
+    backgroundColor: '#fff',
+    borderRadius: WP('3%'),
+    width: WP('90%'),
+    minHeight: WP('30%'),
+  },
+  STANDARD_MULTILINE_TEXT_INPUT: {
+    color: '#333',
+    width: '100%',
+    minHeight: WP('30%'),
   },
 });
