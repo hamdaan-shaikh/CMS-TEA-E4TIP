@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 import CenterModal from '../commons/components/CenterModal';
 import {FONT_STYLES} from '../commons/styles/main-styles';
+import {SmallButton, SolidButton} from '../commons/components/Buttons';
 
 export default ({navigation}) => {
   const [state, setState] = useState({
@@ -18,15 +19,15 @@ export default ({navigation}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <Text style={FONT_STYLES.PAGE_TITLE}>Make a Post</Text>
-      <Button title="Enter Post Text" onPress={() => {}} />
-      <Button
-        title="Share Location"
+      <SolidButton text="Enter Post Text" onPress={() => {}} />
+      <SolidButton
+        text="Share Location"
         onPress={() => {
           toggleModal(true);
         }}
       />
-      <Button title="Upload Photo" onPress={() => {}} />
-      <Button title="Tag a Friend" onPress={() => {}} />
+      <SolidButton text="Upload Photo" onPress={() => {}} />
+      <SolidButton text="Tag a Friend" onPress={() => {}} />
       <CenterModal
         visible={state.modalVisible}
         closeModal={() => {
@@ -50,6 +51,7 @@ export default ({navigation}) => {
 const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
+    alignItems: 'center',
   },
   MODAL_TEXT: {
     color: '#333',

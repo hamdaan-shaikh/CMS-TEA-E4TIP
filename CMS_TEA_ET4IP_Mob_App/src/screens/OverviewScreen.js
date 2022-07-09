@@ -7,6 +7,7 @@ import DataOverviewGraph from '../commons/components/DataOverviewGraph';
 import PopupModal from '../commons/components/PopupModal';
 import PrivacyBadge from '../commons/components/PrivacyBadge';
 import VictoryOverview from '../commons/components/VictoryOverview';
+import {SmallButton, SolidButton} from '../commons/components/Buttons';
 
 // Styles
 import {MAIN_STYLES} from '../commons/styles/main-styles';
@@ -64,21 +65,21 @@ export default ({navigation}) => {
           },
         ]}
       />
-      <View style={LOCAL_STYLES.BUTTON_CONTAINER}>
-      <Button
-          title="User"
-          onPress={() => {
-            toggleModal(true);
-          }}
-        />
-        <Button
-          title="Survey"
+      <SolidButton
+          text="Survey"
           onPress={() => {
             navigation.navigate('SurveyScreen');
           }}
         />
-        <Button
-          title="Predictable Behaviour"
+      <View style={LOCAL_STYLES.BUTTON_CONTAINER}>
+      <SmallButton
+          text="User"
+          onPress={() => {
+            toggleModal(true);
+          }}
+        />
+        <SolidButton
+          text="Predictable Behaviour"
           onPress={() => {
             navigation.navigate('PredictionScreen');
           }}
