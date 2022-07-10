@@ -6,7 +6,7 @@ import {widthPercentageToDP as WP} from 'react-native-responsive-screen';
 
 // Styles
 import {MAIN_STYLES} from '../styles/main-styles';
-import {COLOR2, COLOR3, COLOR4, COLOR5} from '../styles/colors';
+import {COLOR1, COLOR2, COLOR3, COLOR4, COLOR5} from '../styles/colors';
 
 export const NumberInput = ({
   placeholder,
@@ -51,7 +51,7 @@ export const MultilineInput = ({
       <TextInput
         style={LOCAL_STYLES.STANDARD_MULTILINE_TEXT_INPUT}
         multiline={true}
-        maxLength={500}
+        maxLength={400}
         value={value}
         onChangeText={onChange}
         allowFontScaling={false}
@@ -61,7 +61,7 @@ export const MultilineInput = ({
         returnKeyType={'send'}
         placeholder={placeholder}
         textAlignVertical="top"
-        placeholderTextColor={'#888'}
+        placeholderTextColor={COLOR4}
       />
     </View>
   );
@@ -86,7 +86,7 @@ const LOCAL_STYLES = StyleSheet.create({
     borderRadius: WP('4%'),
     borderWidth: 1,
     borderColor: 'rgba(0,0,0,0)',
-    backgroundColor: '#ddd',
+    backgroundColor: COLOR3,
     ...MAIN_STYLES.CENTER_CONTENT,
   },
   STANDARD_MULTILINE_TEXT_INPUT_CONTAINER: {
@@ -98,7 +98,7 @@ const LOCAL_STYLES = StyleSheet.create({
     minHeight: WP('30%'),
   },
   STANDARD_MULTILINE_TEXT_INPUT: {
-    color: '#333',
+    color: COLOR5,
     width: '100%',
     minHeight: WP('30%'),
   },

@@ -4,10 +4,12 @@ import CenterModal from '../commons/components/CenterModal';
 import {FONT_STYLES} from '../commons/styles/main-styles';
 import {SmallButton, SolidButton} from '../commons/components/Buttons';
 import {COLOR2} from '../commons/styles/colors';
+import {MultilineInput} from '../commons/components/CustomInput';
 
 export default ({navigation}) => {
   const [state, setState] = useState({
     modalVisible: false,
+    postText: '',
   });
 
   const toggleModal = modalVisible => {
@@ -17,10 +19,23 @@ export default ({navigation}) => {
     }));
   };
   
+  const onChangeText = postText => {
+    setState(prev => ({
+      ...prev,
+      postText,
+    }));
+  };
+
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <Text style={FONT_STYLES.PAGE_TITLE}>Make a Post</Text>
-      <SolidButton text="Enter Post Text" onPress={() => {}} />
+      <MultilineInput
+        value={state.postText}
+        onChange={onChangeText}
+        onNext={() => {}}
+        inputRef={null}
+        placeholder="Say something here..."
+      />
       <SolidButton
         text="Share Location"
         onPress={() => {
