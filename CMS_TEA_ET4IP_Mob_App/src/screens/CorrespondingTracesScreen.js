@@ -1,34 +1,41 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
-import TraceCategoriesRow from '../commons/components/CorrespondingTracesRow';
+import CorrespondingTracesRow from '../commons/components/CorrespondingTracesRow';
 import PredictionRow from '../commons/components/PredictionRow';
-import {FONT_STYLES} from '../commons/styles/main-styles';
 import {COLOR2} from '../commons/styles/colors';
+import {FONT_STYLES} from '../commons/styles/main-styles';
 
-export default ({route}) => {
+export default ({navigation, route}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <Text style={FONT_STYLES.PAGE_TITLE}>
         All Data Traces corresponding to:
       </Text>
-      <PredictionRow onPress={() => {}} text={route.params.predictionText} onPress={() => {}} />
-      <FlatList/>
+      <PredictionRow text={route.params.predictionText} onPress={() => {}} />
       <FlatList
         contentContainerStyle={LOCAL_STYLES.LIST_CONTAINER}
         data={[0, 0, 0]}
-        renderItem={({item}) => <TraceCategoriesRow />}
+        renderItem={({item}) => (
+          <CorrespondingTracesRow
+            onPress={() =>
+              navigation.navigate('DetailedDataScreen', {
+                text: '',
+              })
+            }
+            text={''}
+          />
+        )}
       />
     </View>
   );
 };
-
 const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
     alignItems: 'center',
     backgroundColor: COLOR2,
   },
-LIST_CONTAINER: {
-  width: 400,
+  LIST_CONTAINER: {
+    width: 400,
   },
 });
