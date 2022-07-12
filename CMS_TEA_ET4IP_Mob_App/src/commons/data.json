@@ -342,7 +342,7 @@
           "FriendRequests": 9,
           "Stories": 14,
           "Photos": 19,
-          "Location": 12
+          "Locations": 12
         }
       },
       {
@@ -352,7 +352,7 @@
           "FriendRequests": 11,
           "Stories": 9,
           "Photos": 16,
-          "Location": 14
+          "Locations": 14
         }
       },
       {
@@ -362,13 +362,13 @@
           "FriendRequests": 8,
           "Stories": 13,
           "Photos": 13,
-          "Location": 9
+          "Locations": 9
         }
       }
     ],
     "GraphInfo": [
       {
-        "title": "Location",
+        "title": "Locations",
         "value": 5,
         "items": [
           {
@@ -805,7 +805,7 @@
           "FriendRequests": 9,
           "Stories": 14,
           "Photos": 19,
-          "Location": 12
+          "Locations": 12
         }
       },
       {
@@ -815,7 +815,7 @@
           "FriendRequests": 11,
           "Stories": 9,
           "Photos": 16,
-          "Location": 14
+          "Locations": 14
         }
       },
       {
@@ -825,7 +825,7 @@
           "FriendRequests": 8,
           "Stories": 13,
           "Photos": 13,
-          "Location": 9
+          "Locations": 9
         }
       },
       {
@@ -835,13 +835,13 @@
           "FriendRequests": 10,
           "Stories": 14,
           "Photos": 14,
-          "Location": 10
+          "Locations": 10
         }
       }
     ],
     "GraphInfo": [
       {
-        "title": "Location",
+        "title": "Locations",
         "value": 5,
         "items": [
           {
@@ -1278,7 +1278,7 @@
           "FriendRequests": 9,
           "Stories": 14,
           "Photos": 19,
-          "Location": 12
+          "Locations": 12
         }
       },
       {
@@ -1288,7 +1288,7 @@
           "FriendRequests": 11,
           "Stories": 9,
           "Photos": 16,
-          "Location": 14
+          "Locations": 14
         }
       },
       {
@@ -1298,7 +1298,7 @@
           "FriendRequests": 8,
           "Stories": 13,
           "Photos": 13,
-          "Location": 9
+          "Locations": 9
         }
       },
       {
@@ -1308,7 +1308,7 @@
           "FriendRequests": 10,
           "Stories": 14,
           "Photos": 14,
-          "Location": 10
+          "Locations": 10
         }
       },
       {
@@ -1318,13 +1318,13 @@
           "FriendRequests": 8,
           "Stories": 12,
           "Photos": 12,
-          "Location": 10
+          "Locations": 10
         }
       }
     ],
     "GraphInfo": [
       {
-        "title": "Location",
+        "title": "Locations",
         "value": 5,
         "items": [
           {
@@ -1761,7 +1761,7 @@
           "FriendRequests": 9,
           "Stories": 14,
           "Photos": 19,
-          "Location": 12
+          "Locations": 12
         }
       },
       {
@@ -1771,7 +1771,7 @@
           "FriendRequests": 11,
           "Stories": 9,
           "Photos": 16,
-          "Location": 14
+          "Locations": 14
         }
       },
       {
@@ -1781,7 +1781,7 @@
           "FriendRequests": 8,
           "Stories": 13,
           "Photos": 13,
-          "Location": 9
+          "Locations": 9
         }
       },
       {
@@ -1791,7 +1791,7 @@
           "FriendRequests": 10,
           "Stories": 14,
           "Photos": 14,
-          "Location": 10
+          "Locations": 10
         }
       },
       {
@@ -1801,7 +1801,7 @@
           "FriendRequests": 8,
           "Stories": 12,
           "Photos": 12,
-          "Location": 10
+          "Locations": 10
         }
       },
       {
@@ -1811,13 +1811,13 @@
           "FriendRequests": 9,
           "Stories": 8,
           "Photos": 7,
-          "Location": 6
+          "Locations": 6
         }
       }
     ],
     "GraphInfo": [
       {
-        "title": "Location",
+        "title": "Locations",
         "value": 5,
         "items": [
           {

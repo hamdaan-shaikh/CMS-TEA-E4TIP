@@ -12,8 +12,8 @@ export default ({route}) => {
       <PredictionRow onPress={() => {}} text = {route.params.text} />
       <FlatList
         contentContainerStyle={LOCAL_STYLES.LIST_CONTAINER}
-        data={[0, 0, 0]}
-        renderItem={({item}) => <CorrespondingTracesRow />}
+        data={route.params.data}
+        renderItem={({item}) => <CorrespondingTracesRow text={item}/>}
       />
     </View>
   );

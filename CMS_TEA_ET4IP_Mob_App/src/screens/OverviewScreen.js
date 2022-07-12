@@ -13,7 +13,7 @@ import {SmallButton, SolidButton} from '../commons/components/Buttons';
 import {MAIN_STYLES} from '../commons/styles/main-styles';
 import {COLOR2} from '../commons/styles/colors';
 
-export default ({navigation}) => {
+export default ({navigation, route}) => {
   const [state, setState] = useState({
     modalVisible: false,
   });
@@ -28,43 +28,23 @@ export default ({navigation}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <VictoryOverview
-        data={[
-          {
-            activity: 'Locations',
-            score: 13,
-            onPress: () => {
-              navigation.navigate('BarChartScreen');
-            },
+        data={route.params.GraphInfo.map(item => ({
+          activity: item.title,
+          score: item.value,
+          onPress: () => {
+            switch (item.title) {
+              case 'Locations':
+                navigation.navigate('BarChartScreen');
+                break;
+              case 'Browsing':
+                navigation.navigate('BubbleChartScreen');
+                break;
+              default:
+                navigation.navigate('PieChartScreen', item.items);
+                break;
+            }
           },
-          {
-            activity: 'Browsing',
-            score: 16,
-            onPress: () => {
-              navigation.navigate('BubbleChartScreen');
-            },
-          },
-          {
-            activity: 'Posts',
-            score: 14,
-            onPress: () => {
-              navigation.navigate('BubbleChartScreen');
-            },
-          },
-          {
-            activity: 'Photos',
-            score: 19,
-            onPress: () => {
-              navigation.navigate('PieChartScreen');
-            },
-          },
-          {
-            activity: 'Friends',
-            score: 19,
-            onPress: () => {
-              navigation.navigate('PieChartScreen');
-            },
-          },
-        ]}
+        }))}
       />
       <SolidButton
           style={{
@@ -91,7 +71,10 @@ export default ({navigation}) => {
           }}
           text="Predictable Behaviour"
           onPress={() => {
-            navigation.navigate('PredictionScreen');
+            navigation.navigate(
+              'PredictionScreen',
+              route.params.PredictableBehaviors,
+            );
           }}
         />
       </View>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import {MAIN_STYLES} from '../commons/styles/main-styles';
 
@@ -10,7 +10,7 @@ import {
 import {COLOR2,COLOR3} from '../commons/styles/colors';
 import {heightPercentageToDP} from 'react-native-responsive-screen';
 
-export default ({navigation}) => {
+export default ({navigation, route}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <SolidButton
@@ -22,7 +22,7 @@ export default ({navigation}) => {
       <HollowButton
         text="Check your Privacy Data-Traces"
         onPress={() => {
-          navigation.navigate('OverviewScreen');
+          navigation.navigate('OverviewScreen', route.params.March);
         }}
       />
 

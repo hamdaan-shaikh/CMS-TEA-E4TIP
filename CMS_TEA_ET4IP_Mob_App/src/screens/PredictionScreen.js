@@ -4,19 +4,20 @@ import PredictionRow from '../commons/components/PredictionRow';
 import {FONT_STYLES} from '../commons/styles/main-styles';
 import {COLOR2} from '../commons/styles/colors';
 
-export default ({navigation}) => {
+export default ({navigation, route}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <Text style={FONT_STYLES.PAGE_TITLE}>Predictable Behaviours</Text>
       <FlatList
         contentContainerStyle={LOCAL_STYLES.LIST_STYLE}
-        data={[0, 1, 2, 3]}
+        data={route.params}
         renderItem={({item}) => (
           <PredictionRow
-            text={''}
+            text={item.title}
             onPress={() => {
               navigation.navigate('CorrespondingTracesScreen', {
-                predictionText: '',
+                predictionText: item.title,
+                data: item.items,
               });
             }}
           />

@@ -9,15 +9,16 @@ import {widthPercentageToDP as WP} from 'react-native-responsive-screen';
 import {FONT_STYLES, MAIN_STYLES} from '../commons/styles/main-styles';
 import {COLOR2} from '../commons/styles/colors';
 
-export default props => {
+export default ({route}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <Text style={FONT_STYLES.PAGE_TITLE}>Pie Chart Screen</Text>
       <PieChart
-        data={[
-          {activity: 'None', score: 193, onPress: () => {}},
-          {activity: 'Null', score: 100, onPress: () => {}},
-        ]}
+        data={route.params.map(item => ({
+          activity: item.category,
+          score: item.value,
+          onPress: () => {},
+        }))}
       />
     </View>
   );

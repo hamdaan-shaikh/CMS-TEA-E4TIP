@@ -14,6 +14,8 @@ import PieChartScreen from '../screens/PieChartScreen';
 import SurveyScreen from '../screens/SurveyScreen';
 import DetailedDataScreen from '../screens/DetailedDataScreen';
 
+import * as data from '../commons/data.json';
+
 const Stack = createNativeStackNavigator();
 
 export default () => {
@@ -22,7 +24,11 @@ export default () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="LandingScreen" component={LandingScreen} />
+      <Stack.Screen
+        name="LandingScreen"
+        component={LandingScreen}
+        initialParams={data}
+      />
       <Stack.Screen name="OverviewScreen" component={OverviewScreen} />
       <Stack.Screen name="PredictionScreen" component={PredictionScreen} />
       <Stack.Screen name="CorrespondingTracesScreen" component={CorrespondingTracesScreen} />

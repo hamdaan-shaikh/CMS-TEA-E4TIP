@@ -14,15 +14,16 @@ export default ({navigation, route}) => {
       <PredictionRow text={route.params.predictionText} onPress={() => {}} />
       <FlatList
         contentContainerStyle={LOCAL_STYLES.LIST_CONTAINER}
-        data={[0, 0, 0]}
+        data={route.params.data}
         renderItem={({item}) => (
           <CorrespondingTracesRow
             onPress={() =>
               navigation.navigate('DetailedDataScreen', {
-                text: '',
+                text: item.title,
+                data: item.items,
               })
             }
-            text={''}
+            text={'item.title'}
           />
         )}
       />
