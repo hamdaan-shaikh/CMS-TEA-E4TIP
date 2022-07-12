@@ -334,7 +334,7 @@
         ]
       }
     ],
-    "DataTraces": [
+    "LineDataTraces": [
       {
         "month": "January",
         "traces": {
@@ -797,7 +797,7 @@
         ]
       }
     ],
-    "DataTraces": [
+    "LineDataTraces": [
       {
         "month": "January",
         "traces": {
@@ -1270,7 +1270,7 @@
         ]
       }
     ],
-    "DataTraces": [
+    "LineDataTraces": [
       {
         "month": "January",
         "traces": {
@@ -1753,7 +1753,7 @@
         ]
       }
     ],
-    "DataTraces": [
+    "LineDataTraces": [
       {
         "month": "January",
         "traces": {

@@ -7,6 +7,7 @@ import DataOverviewGraph from '../commons/components/DataOverviewGraph';
 import PopupModal from '../commons/components/PopupModal';
 import PrivacyBadge from '../commons/components/PrivacyBadge';
 import VictoryOverview from '../commons/components/VictoryOverview';
+import LineChart from '../commons/components/LineChart';
 import {SmallButton, SolidButton} from '../commons/components/Buttons';
 
 // Styles
@@ -46,6 +47,7 @@ export default ({navigation, route}) => {
           },
         }))}
       />
+      <LineChart data={route.params.LineDataTraces} />
       <SolidButton
           style={{
             marginHorizontal: 5,
