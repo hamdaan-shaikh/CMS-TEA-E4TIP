@@ -13,8 +13,11 @@ export default ({navigation}) => {
         data={[0, 1, 2, 3]}
         renderItem={({item}) => (
           <PredictionRow
+            text={''}
             onPress={() => {
-              navigation.navigate('TraceCategoriesScreen');
+              navigation.navigate('CorrespondingTracesScreen', {
+                predictionText: '',
+              });
             }}
           />
         )}

@@ -1,17 +1,18 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
-import TraceCategoriesRow from '../commons/components/TraceCategoryRow';
+import TraceCategoriesRow from '../commons/components/CorrespondingTracesRow';
 import PredictionRow from '../commons/components/PredictionRow';
 import {FONT_STYLES} from '../commons/styles/main-styles';
 import {COLOR2} from '../commons/styles/colors';
 
-export default () => {
+export default ({route}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <Text style={FONT_STYLES.PAGE_TITLE}>
         All Data Traces corresponding to:
       </Text>
-      <PredictionRow onPress={() => {}} />
+      <PredictionRow onPress={() => {}} text={route.params.predictionText} onPress={() => {}} />
+      <FlatList/>
       <FlatList
         contentContainerStyle={LOCAL_STYLES.LIST_CONTAINER}
         data={[0, 0, 0]}

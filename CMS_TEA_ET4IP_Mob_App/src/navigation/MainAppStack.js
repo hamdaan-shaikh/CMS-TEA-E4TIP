@@ -6,7 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LandingScreen from '../screens/LandingScreen';
 import OverviewScreen from '../screens/OverviewScreen';
 import PredictionScreen from '../screens/PredictionScreen';
-import TraceCategoriesScreen from '../screens/TraceCategoriesScreen';
+import CorrespondingTracesScreen from '../screens/CorrespondingTracesScreen';
 import MakePostScreen from '../screens/MakePostScreen';
 import BubbleChartScreen from '../screens/BubbleChartScreen';
 import BarChartScreen from '../screens/BarChartScreen';
@@ -25,7 +25,7 @@ export default () => {
       <Stack.Screen name="LandingScreen" component={LandingScreen} />
       <Stack.Screen name="OverviewScreen" component={OverviewScreen} />
       <Stack.Screen name="PredictionScreen" component={PredictionScreen} />
-      <Stack.Screen name="TraceCategoriesScreen" component={TraceCategoriesScreen} />
+      <Stack.Screen name="CorrespondingTracesScreen" component={CorrespondingTracesScreen} />
       <Stack.Screen name="MakePostScreen" component={MakePostScreen} />
       <Stack.Screen name="BarChartScreen" component={BarChartScreen} />
       <Stack.Screen name="PieChartScreen" component={PieChartScreen} />
