@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState } from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import {MAIN_STYLES} from '../commons/styles/main-styles';
 
@@ -9,37 +9,43 @@ import {
 } from '../commons/components/Buttons'; 
 import {COLOR2,COLOR3} from '../commons/styles/colors';
 import {heightPercentageToDP} from 'react-native-responsive-screen';
+import SelectionButtons from '../commons/components/SelectionButtons';
 
 export default ({navigation, route}) => {
+  const [state, setState] = useState({
+    month: 'March',
+  });
+
+  const updateMonth = month => {
+    setState(prev => ({
+      ...prev,
+      month,
+    }));
+  };  
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <SolidButton
         text="Make a Post"
         onPress={() => {
-          navigation.navigate('MakePostScreen');
+          navigation.navigate('MakePostScreen', {
+            locationValue: route.params[state.month].GraphInfo[0].value,
+          });
         }}
       />
-      <HollowButton
+      <SolidButton
         text="Check your Privacy Data-Traces"
         onPress={() => {
           navigation.navigate('OverviewScreen', route.params.March);
         }}
       />
 
-      <FlatList
-        style={{
-          maxHeight: heightPercentageToDP('30%'),
-        }}
-        contentContainerStyle={LOCAL_STYLES.LIST_STYLE}
-        data={[1, 2, 3]}
-        renderItem={({item}) => (
-          <SmallButton
-          style={{
-            maxHeight: heightPercentageToDP('30%'),
-          }}
-          title={item.toString()}
-          onPress={() => console.log(item)} />
-        )}
+<SelectionButtons
+        buttonList={Object.keys(route.params).map(item => ({
+          text: item,
+          onPress: () => {
+            updateMonth(item);
+          },
+        }))}
       />
     </View>
   );

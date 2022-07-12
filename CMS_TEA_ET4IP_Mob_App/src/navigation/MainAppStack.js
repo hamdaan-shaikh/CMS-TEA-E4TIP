@@ -14,7 +14,7 @@ import PieChartScreen from '../screens/PieChartScreen';
 import SurveyScreen from '../screens/SurveyScreen';
 import DetailedDataScreen from '../screens/DetailedDataScreen';
 
-import * as data from '../commons/data.json';
+import data from '../commons/data.json';
 
 const Stack = createNativeStackNavigator();
 
