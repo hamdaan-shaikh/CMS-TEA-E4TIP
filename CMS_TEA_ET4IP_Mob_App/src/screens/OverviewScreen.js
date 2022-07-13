@@ -35,12 +35,17 @@ export default ({navigation, route}) => {
           onPress: () => {
             switch (item.title) {
               case 'Locations':
-                navigation.navigate('BarChartScreen', item.items);
+                navigation.navigate('MapScreen', item.items);
+                break;
               case 'Browsing':
                 navigation.navigate('BubbleChartScreen');
                 break;
               default:
-                navigation.navigate('PieChartScreen', item.items);
+                
+                navigation.navigate('PieChartScreen', {
+                  data: item.items,
+                  type: item.title,
+                });
                 break;
             }
           },

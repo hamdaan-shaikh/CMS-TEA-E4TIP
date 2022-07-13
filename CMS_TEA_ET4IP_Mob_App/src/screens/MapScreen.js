@@ -16,7 +16,11 @@ export default ({route}) => {
   const mapRef = useRef(null);    
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
-      <Text style={FONT_STYLES.PAGE_TITLE}>Bar Chart Screen</Text>
+      <Text style={FONT_STYLES.PAGE_TITLE}>Visited Locations</Text>
+      <Text style={FONT_STYLES.PAGE_DESCRIPTION}>
+        Avoid posting your home address and personal addresses, to keep the
+        physical privacy of yourself and your loved ones, safe.
+      </Text>
       <View style={LOCAL_STYLES.MAP_CONTAINER}>
         <MapView
           ref={mapRef}

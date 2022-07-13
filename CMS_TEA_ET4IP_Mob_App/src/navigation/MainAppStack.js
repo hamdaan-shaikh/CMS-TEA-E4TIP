@@ -9,7 +9,7 @@ import PredictionScreen from '../screens/PredictionScreen';
 import CorrespondingTracesScreen from '../screens/CorrespondingTracesScreen';
 import MakePostScreen from '../screens/MakePostScreen';
 import BubbleChartScreen from '../screens/BubbleChartScreen';
-import BarChartScreen from '../screens/BarChartScreen';
+import BarChartScreen from '../screens/MapScreen';
 import PieChartScreen from '../screens/PieChartScreen';
 import SurveyScreen from '../screens/SurveyScreen';
 import DetailedDataScreen from '../screens/DetailedDataScreen';

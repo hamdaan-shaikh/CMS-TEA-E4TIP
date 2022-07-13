@@ -12,7 +12,12 @@ import {COLOR2} from '../commons/styles/colors';
 export default props => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
-      <Text style={FONT_STYLES.PAGE_TITLE}>Bubble Chart Screen</Text>
+      <Text style={FONT_STYLES.PAGE_TITLE}>Browsing</Text>
+      <Text style={FONT_STYLES.PAGE_DESCRIPTION}>
+        Avoid clicking those random click-baits. Third-party apps can capture
+        and misuse your private information. It can be used to scam you or serve
+        you unnecessary ads. Best choice is to browse in incognito mode.
+      </Text>
       <BubbleChart
         data={[
           {activity: 'None', score: 19000, onPress: () => {}},

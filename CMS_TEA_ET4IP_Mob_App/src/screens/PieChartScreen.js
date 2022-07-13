@@ -12,9 +12,37 @@ import {COLOR2} from '../commons/styles/colors';
 export default ({route}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
-      <Text style={FONT_STYLES.PAGE_TITLE}>Pie Chart Screen</Text>
+      {route.params.type === 'Photos' ? (
+        <>
+          <Text style={FONT_STYLES.PAGE_TITLE}>Photos</Text>
+          <Text style={FONT_STYLES.PAGE_DESCRIPTION}>
+            Advertising your whereabouts through photos may already be revealing
+            too much information. Never post Visa, Passport, or any such
+            identity documents. Providing this information may appear harmless,
+            but it can be used to steal identity.
+          </Text>
+        </>
+      ) : route.params.type === 'Stories' ? (
+        <>
+          <Text style={FONT_STYLES.PAGE_TITLE}>Stories / Status</Text>
+          <Text style={FONT_STYLES.PAGE_DESCRIPTION}>
+            Avoid posting information that you will not be able to erase from
+            the internet. It could potentially harm you in the future, if a
+            background check is ever done, for e.g. when pursuing job
+            opportunities, politics, etc
+          </Text>
+        </>
+      ) : (
+        <>
+          <Text style={FONT_STYLES.PAGE_TITLE}>Friend Requests</Text>
+          <Text style={FONT_STYLES.PAGE_DESCRIPTION}>
+            Avoid accepting friend requests from unknown people, to protect
+            yourselves from becoming victims of cyberbullying, stalking.
+          </Text>
+        </>
+      )}
       <PieChart
-        data={route.params.map(item => ({
+        data={route.params.data.map(item => ({
           activity: item.category,
           score: item.value,
           onPress: () => {},
