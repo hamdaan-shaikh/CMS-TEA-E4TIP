@@ -63,7 +63,17 @@ export default ({navigation, route}) => {
           },
         }))}
       />
-      <PrivacyBadge />
+      <PrivacyBadge
+        position={
+          state.month === 'March'
+            ? 3
+            : state.month === 'April'
+            ? 2
+            : state.month === 'May'
+            ? 1
+            : 0
+        }
+      />
     </View>
   );
 };
