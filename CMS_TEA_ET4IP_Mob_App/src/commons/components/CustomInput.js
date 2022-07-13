@@ -92,7 +92,7 @@ const LOCAL_STYLES = StyleSheet.create({
   STANDARD_MULTILINE_TEXT_INPUT_CONTAINER: {
     paddingHorizontal: WP('5%'),
     color: '#333',
-    backgroundColor: '#fff',
+    backgroundColor: 'COLOR3',
     borderRadius: WP('3%'),
     width: WP('90%'),
     minHeight: WP('30%'),

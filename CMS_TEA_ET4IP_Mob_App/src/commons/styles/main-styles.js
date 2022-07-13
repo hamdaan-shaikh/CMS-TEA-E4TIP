@@ -14,7 +14,7 @@ export const FONT_STYLES = {
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',
-    color: 'COLOR4',
+    color: COLOR4,
   },
   PAGE_DESCRIPTION: {
     textAlign: 'center',

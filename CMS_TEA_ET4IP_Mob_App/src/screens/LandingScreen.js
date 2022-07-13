@@ -49,7 +49,7 @@ export default ({navigation, route}) => {
             marginBottom: 50,
           },
         ]}>
-        {"Let's learn something about privacy."}
+        {"Let's learn something about privacy!"}
       </Text>
       <SolidButton
         text="Make a Post"

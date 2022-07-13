@@ -58,9 +58,7 @@ export default ({data, withThreshold}) => {
           data={data}
           x="activity"
           y="score"
-                   domainPadding={{
-            x: 20,
-          }}         domainPadding={{
+          domainPadding={{
             x: 20,
           }}
           events={[
