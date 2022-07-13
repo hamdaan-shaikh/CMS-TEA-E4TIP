@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';  
 import {View, Text, StyleSheet, Button} from 'react-native';
 
 // Components
@@ -35,8 +35,7 @@ export default ({navigation, route}) => {
           onPress: () => {
             switch (item.title) {
               case 'Locations':
-                navigation.navigate('BarChartScreen');
-                break;
+                navigation.navigate('BarChartScreen', item.items);
               case 'Browsing':
                 navigation.navigate('BubbleChartScreen');
                 break;
