@@ -42,7 +42,6 @@ export default ({navigation, route}) => {
                 navigation.navigate('BubbleChartScreen');
                 break;
               default:
-
                 navigation.navigate('PieChartScreen', {
                   data: item.items,
                   type: item.title,
@@ -54,9 +53,6 @@ export default ({navigation, route}) => {
       />
       <LineChart data={route.params.LineDataTraces} />
       <SolidButton
-          style={{
-            marginHorizontal: 5,
-          }}
           text="Survey"
           onPress={() => {
             navigation.navigate('SurveyScreen');
@@ -77,7 +73,12 @@ export default ({navigation, route}) => {
           style={{
             marginHorizontal: 5,
           }}
-          onPress={() => {}}
+          onPress={() => {
+            navigation.navigate(
+              'HistoryScreen',
+              route.params.PredictableBehaviors,
+            );
+          }}
         />
       </View>
       <SolidButton

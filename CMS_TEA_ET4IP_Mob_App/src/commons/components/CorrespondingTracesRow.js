@@ -5,7 +5,7 @@ import {COLOR2, COLOR3, COLOR4, COLOR5} from '../styles/colors';
 
 export default ({text, onPress}) => {
   return (
-    <Pressable style={LOCAL_STYLES.MAIN_CONTAINER} onPress={onPress}>
+    <Pressable style={LOCAL_STYLES.MAIN_CONTAINER}>
     <Text style={LOCAL_STYLES.ITEM_TEXT}>{text}</Text>
   </Pressable>
   );

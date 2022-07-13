@@ -13,6 +13,7 @@ import BarChartScreen from '../screens/MapScreen';
 import PieChartScreen from '../screens/PieChartScreen';
 import SurveyScreen from '../screens/SurveyScreen';
 import DetailedDataScreen from '../screens/DetailedDataScreen';
+import HistoryScreen from '../screens/HistoryScreen';
 
 import data from '../commons/data.json';
 
@@ -38,6 +39,7 @@ export default () => {
       <Stack.Screen name="BubbleChartScreen" component={BubbleChartScreen} />
       <Stack.Screen name="SurveyScreen" component={SurveyScreen} />
       <Stack.Screen name="DetailedDataScreen" component={DetailedDataScreen} />
+      <Stack.Screen name="HistoryScreen" component={HistoryScreen} />
       
     </Stack.Navigator>
   );
