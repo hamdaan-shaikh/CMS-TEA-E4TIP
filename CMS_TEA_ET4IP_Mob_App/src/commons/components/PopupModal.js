@@ -8,7 +8,7 @@ import Modal from 'react-native-modal';
 // Styles
 import {MAIN_STYLES} from '../styles/main-styles';
 
-const PopupModal = props => {
+export const PopupModal = props => {
   return (
     <Modal
       isVisible={props.visible}

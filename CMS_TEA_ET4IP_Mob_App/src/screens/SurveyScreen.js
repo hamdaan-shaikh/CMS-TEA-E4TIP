@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, TextInput, Button} from 'react-native';
 import {SolidButton} from '../commons/components/Buttons';
 import {NumberInput} from '../commons/components/CustomInput';
+import {PopupModal} from '../commons/components/PopupModal';
+import VictoryOverview from '../commons/components/VictoryOverview';
 import {FONT_STYLES} from '../commons/styles/main-styles';
 import {COLOR2, COLOR5} from '../commons/styles/colors';
 
@@ -34,7 +36,15 @@ export default ({navigation}) => {
     thirdInput: '',
     fourthInput: '',
     fifthInput: '',
+    modalVisible: false,
   });
+
+  const toggleModal = modalVisible => {
+    setState(prev => ({
+      ...prev,
+      modalVisible,
+    }));
+  };
 
   const onChangeFirst = firstInput => {
     setState(prev => ({
@@ -57,7 +67,6 @@ export default ({navigation}) => {
     }));
   };
 
-
   const onChangeFourth = fourthInput => {
     setState(prev => ({
       ...prev,
@@ -73,7 +82,7 @@ export default ({navigation}) => {
   };
 
   const onSubmit = () => {
-    navigation.goBack();
+    toggleModal(true);
   };
     ``
   return (
@@ -126,6 +135,52 @@ export default ({navigation}) => {
           navigation.goBack();
         }}
       />
+      <PopupModal
+        visible={state.modalVisible}
+        closeModal={() => {
+          toggleModal(false);
+        }}>
+        <View style={LOCAL_STYLES.MODAL_CONTAINER}>
+          <Text
+            style={[
+              FONT_STYLES.PAGE_TITLE,
+              {
+                marginTop: 50,
+              },
+            ]}>
+            New data
+          </Text>
+          <VictoryOverview
+            data={[
+              {
+                activity: 'Location',
+                score: +state.firstInput,
+                onPress: () => {},
+              },
+              {
+                activity: 'Photos',
+                score: +state.secondInput,
+                onPress: () => {},
+              },
+              {
+                activity: 'Stories',
+                score: +state.thirdInput,
+                onPress: () => {},
+              },
+              {
+                activity: 'Friend Request',
+                score: +state.fourthInput,
+                onPress: () => {},
+              },
+              {
+                activity: 'Browsing',
+                score: +state.fifthInput,
+                onPress: () => {},
+              },
+            ]}
+          />
+        </View>
+      </PopupModal>
     </View>
   );
 };
@@ -136,6 +191,12 @@ const LOCAL_STYLES = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLOR2,
   },
+  
+  MODAL_CONTAINER: {
+    borderRadius: 10,
+    padding: 10,
+  },
+
   ITEM_CONTAINER: {
     marginTop: 10,
     alignItems: 'center',
