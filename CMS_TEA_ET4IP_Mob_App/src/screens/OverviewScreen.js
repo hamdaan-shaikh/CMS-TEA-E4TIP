@@ -29,6 +29,7 @@ export default ({navigation, route}) => {
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <VictoryOverview
+        withThreshold
         data={route.params.GraphInfo.map(item => ({
           activity: item.title,
           score: item.value,
@@ -41,7 +42,7 @@ export default ({navigation, route}) => {
                 navigation.navigate('BubbleChartScreen');
                 break;
               default:
-                
+
                 navigation.navigate('PieChartScreen', {
                   data: item.items,
                   type: item.title,

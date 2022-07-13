@@ -6,17 +6,21 @@ import {SmallButton, SolidButton} from '../commons/components/Buttons';
 import {COLOR2} from '../commons/styles/colors';
 import {MultilineInput} from '../commons/components/CustomInput';
 
-export default ({navigation}) => {
+const threshold = 10;
+
+export default ({navigation, route}) => {
   const [state, setState] = useState({
     modalVisible: false,
     postText: '',
   });
 
   const toggleModal = modalVisible => {
-    setState(prev => ({
-      ...prev,
-      modalVisible,
-    }));
+    if (route.params.locationValue > threshold) {
+      setState(prev => ({
+        ...prev,
+        modalVisible,
+      }));
+    }
   };
   
   const onChangeText = postText => {

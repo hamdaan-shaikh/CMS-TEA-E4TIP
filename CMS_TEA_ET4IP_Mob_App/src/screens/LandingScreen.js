@@ -12,6 +12,9 @@ import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
+
+const currMonth = 'March';
+
 import SelectionButtons from '../commons/components/SelectionButtons';
 import PrivacyBadge from '../commons/components/PrivacyBadge';  
 
@@ -51,7 +54,7 @@ export default ({navigation, route}) => {
       <SolidButton
         text="Check your Privacy Data-Traces"
         onPress={() => {
-          navigation.navigate('OverviewScreen', route.params.March);
+          navigation.navigate('OverviewScreen', route.params[currMonth]);
         }}
       />
 
