@@ -72,9 +72,9 @@ const LOCAL_STYLES = StyleSheet.create({
     flex: 1,
   },
   NUMBER_INPUT_CONTAINER: {
-    color: 'COLOR4',
+    color: COLOR4,
     flex: 1,
-    backgroundColor: 'COLOR3',
+    backgroundColor: COLOR3,
     height: '100%',
     paddingHorizontal: WP('4%'),
   },
@@ -92,7 +92,7 @@ const LOCAL_STYLES = StyleSheet.create({
   STANDARD_MULTILINE_TEXT_INPUT_CONTAINER: {
     paddingHorizontal: WP('5%'),
     color: '#333',
-    backgroundColor: 'COLOR3',
+    backgroundColor: COLOR3,
     borderRadius: WP('3%'),
     width: WP('90%'),
     minHeight: WP('30%'),

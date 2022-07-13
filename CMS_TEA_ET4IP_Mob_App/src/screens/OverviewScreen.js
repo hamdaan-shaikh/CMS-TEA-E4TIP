@@ -10,8 +10,9 @@ import VictoryOverview from '../commons/components/VictoryOverview';
 import LineChart from '../commons/components/LineChart';
 import {SmallButton, SolidButton} from '../commons/components/Buttons';
 
+
 // Styles
-import {MAIN_STYLES} from '../commons/styles/main-styles';
+import {MAIN_STYLES, FONT_STYLES} from '../commons/styles/main-styles';
 import {COLOR2} from '../commons/styles/colors';
 
 export default ({navigation, route}) => {
@@ -28,6 +29,7 @@ export default ({navigation, route}) => {
   
   return (
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
+      <Text style={FONT_STYLES.PAGE_TITLE}>Privacy Overview</Text>
       <VictoryOverview
         withThreshold
         data={route.params.data.GraphInfo.map(item => ({
@@ -108,6 +110,7 @@ const LOCAL_STYLES = StyleSheet.create({
     
   MAIN_CONTAINER: {
     flex: 1,
+    marginBottom:5,
     ...MAIN_STYLES.CENTER_CONTENT,
     backgroundColor: COLOR2,
   },

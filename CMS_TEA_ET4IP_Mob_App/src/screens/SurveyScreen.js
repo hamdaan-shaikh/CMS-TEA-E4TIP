@@ -110,7 +110,7 @@ export default ({navigation}) => {
         lastFormElement={false}
       />
       <SurveyItem
-        question="ow many friend requests/tags have you made/accepted last month?"
+        question="How many friend requests/tags have you made/accepted last month?"
         value={state.fourthInput}
         onChange={onChangeFourth}
         placeholder={'Answer here...'}
@@ -203,7 +203,7 @@ const LOCAL_STYLES = StyleSheet.create({
     paddingHorizontal: 5,
   },
   ITEM_TITLE: {
-    color: 'COLOR5',
+    color: COLOR5,
     fontSize: 15,
     textAlign: 'center',
   },

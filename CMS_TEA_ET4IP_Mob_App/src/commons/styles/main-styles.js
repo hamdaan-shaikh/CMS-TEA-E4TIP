@@ -12,8 +12,8 @@ export const FONT_STYLES = {
   PAGE_TITLE: {
     marginTop: 10,
     textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
+    fontSize: 35,
+    fontFamily: 'normal',
     color: COLOR4,
   },
   PAGE_DESCRIPTION: {
