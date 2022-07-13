@@ -42,6 +42,7 @@ export default ({route}) => {
         </>
       )}
       <PieChart
+        type={route.params.type}
         data={route.params.data.map(item => ({
           activity: item.category,
           score: item.value,

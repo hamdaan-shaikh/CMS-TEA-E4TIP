@@ -3,7 +3,18 @@ import {StyleSheet, View} from 'react-native';
 import {widthPercentageToDP} from 'react-native-responsive-screen';
 import {VictoryBar, VictoryChart, Background} from 'victory-native';
 import {CustomVictoryTheme} from '../helpers/VictoryTheme';
-import {COLOR1, COLOR2, COLOR3, COLOR4, COLOR5} from '../styles/colors';
+import {
+  COLOR1,
+  COLOR2,
+  COLOR3,
+  COLOR4,
+  COLOR5,
+  GRAPH_COLOR1,
+  GRAPH_COLOR2,
+  GRAPH_COLOR3,
+  GRAPH_COLOR4,
+  GRAPH_COLOR5,
+} from '../styles/colors';
 
 export default ({data, withThreshold}) => {
   return (
@@ -21,7 +32,23 @@ export default ({data, withThreshold}) => {
         <VictoryBar
           style={{
             data: {
-              fill: ({data}) => COLOR1,
+              fill: ({data, index}) => {
+                if (index === 0) {
+                  return GRAPH_COLOR1;
+                }
+                if (index === 1) {
+                  return GRAPH_COLOR2;
+                }
+                if (index === 2) {
+                  return GRAPH_COLOR3;
+                }
+                if (index === 3) {
+                  return GRAPH_COLOR4;
+                }
+                if (index === 4) {
+                  return GRAPH_COLOR5;
+                }
+              },
             },
           }}
           data={data}
