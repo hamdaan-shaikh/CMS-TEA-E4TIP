@@ -11,19 +11,18 @@ export default ({navigation, route}) => {
       <Text style={FONT_STYLES.PAGE_TITLE}>
         All Data Traces corresponding to:
       </Text>
-      <PredictionRow text={route.params.predictionText} onPress={() => {}} />
+      <PredictionRow
+        addPrefix={!route.params.history}
+        text={route.params.predictionText}
+        onPress={() => {}}
+      />
       <FlatList
         contentContainerStyle={LOCAL_STYLES.LIST_CONTAINER}
         data={route.params.data}
         renderItem={({item}) => (
           <CorrespondingTracesRow
-            onPress={() =>
-              navigation.navigate('DetailedDataScreen', {
-                text: item.title,
-                data: item.items,
-              })
-            }
-            text={'item.title'}
+          addPrefix={!route.params.history}
+          text={route.params.history ? item.title : item}
           />
         )}
       />

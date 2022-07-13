@@ -30,7 +30,7 @@ export default ({navigation, route}) => {
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <VictoryOverview
         withThreshold
-        data={route.params.GraphInfo.map(item => ({
+        data={route.params.data.GraphInfo.map(item => ({
           activity: item.title,
           score: item.value,
           onPress: () => {
@@ -51,7 +51,7 @@ export default ({navigation, route}) => {
           },
         }))}
       />
-      <LineChart data={route.params.LineDataTraces} />
+      <LineChart data={route.params.data.LineDataTraces} />
       <SolidButton
           text="Survey"
           onPress={() => {
@@ -76,21 +76,22 @@ export default ({navigation, route}) => {
           onPress={() => {
             navigation.navigate(
               'HistoryScreen',
-              route.params.PredictableBehaviors,
+              route.data.PredictableBehaviors,
             );
           }}
         />
       </View>
+      
       <SolidButton
           style={{
             marginHorizontal: 5,
           }}
           text="Predictable Behaviour"
           onPress={() => {
-            navigation.navigate(
-              'PredictionScreen',
-              route.params.PredictableBehaviors,
-            );
+            navigation.navigate('PredictionScreen', {
+              data: route.params.data.PredictableBehaviors,
+              userData: route.params.userData,
+            });
           }}
         />
       <PopupModal

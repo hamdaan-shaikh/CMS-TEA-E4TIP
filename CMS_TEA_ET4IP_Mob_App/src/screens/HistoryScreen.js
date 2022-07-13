@@ -18,6 +18,7 @@ export default ({navigation, route}) => {
               navigation.navigate('CorrespondingTracesScreen', {
                 predictionText: item.title,
                 data: item.items,
+                history: true,
               });
             }}
           />

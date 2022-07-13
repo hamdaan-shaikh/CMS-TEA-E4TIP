@@ -61,7 +61,7 @@ export default ({navigation, route}) => {
           Are you sure you would like to share your location?
         </Text>
         <Text style={LOCAL_STYLES.MODAL_TEXT}>
-          You have already shared it __ times this month
+          {`You have already shared it ${route.params.locationValue} times this month`}
         </Text>
       </CenterModal>
     </View>

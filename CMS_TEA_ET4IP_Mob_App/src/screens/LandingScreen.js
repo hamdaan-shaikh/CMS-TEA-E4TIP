@@ -12,11 +12,19 @@ import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
-
-const currMonth = 'March';
-
 import SelectionButtons from '../commons/components/SelectionButtons';
 import PrivacyBadge from '../commons/components/PrivacyBadge';  
+
+const userTraces = [
+  'stay at home more than outside',
+  'display your gender in profile',
+  'avoid too much exertion activities',
+  'follow influencers in cooking channels',
+  'visit a clinic',
+  'visit bringing up baby meetup workshops',
+  'post QnA stories about making efforts to quit smoking alcohol drugs',
+  'post Daily stories about - not feeling like working a lot tired',
+];
 
 export default ({navigation, route}) => {
   const [state, setState] = useState({
@@ -54,7 +62,10 @@ export default ({navigation, route}) => {
       <SolidButton
         text="Check your Privacy Data-Traces"
         onPress={() => {
-          navigation.navigate('OverviewScreen', route.params[currMonth]);
+          navigation.navigate('OverviewScreen', {
+            data: route.params[state.month],
+            userData: userTraces,
+          });
         }}
       />
 

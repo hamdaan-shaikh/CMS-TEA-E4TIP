@@ -3,10 +3,12 @@ import {View, Text, StyleSheet, Pressable} from 'react-native';
 import {widthPercentageToDP} from 'react-native-responsive-screen';
 import {COLOR2, COLOR3, COLOR4, COLOR5} from '../styles/colors';
 
-export default ({text, onPress}) => {
+export default ({text, onPress, addPrefix}) => {
   return (
     <Pressable style={LOCAL_STYLES.MAIN_CONTAINER}>
-    <Text style={LOCAL_STYLES.ITEM_TEXT}>{text}</Text>
+      <Text style={LOCAL_STYLES.ITEM_TEXT}>
+        {addPrefix ? `Because you ${text}` : text}
+      </Text>
   </Pressable>
   );
 };
