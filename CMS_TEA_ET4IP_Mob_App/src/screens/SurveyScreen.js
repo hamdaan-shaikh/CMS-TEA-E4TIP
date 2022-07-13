@@ -80,38 +80,38 @@ export default ({navigation}) => {
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <Text style={FONT_STYLES.PAGE_TITLE}>Survey</Text>
       <SurveyItem
-        question="First question?"
+        question="How many locations/check-ins have you shared last month?"
         value={state.firstInput}
         onChange={onChangeFirst}
-        placeholder={'Answer first'}
+        placeholder={'Answer here...'}
         lastFormElement={false}
       />
       <SurveyItem
-        question="Second question?"
+        question="How many photos have you shared last month?"
         value={state.secondInput}
         onChange={onChangeSecond}
-        placeholder={'Answer second'}
+        placeholder={'Answer here...'}
         lastFormElement={false}
       />
       <SurveyItem
-        question="Third question?"
+        question="How many posts/stories have you shared last month?"
         value={state.thirdInput}
         onChange={onChangeThird}
-        placeholder={'Answer third'}
+        placeholder={'Answer here...'}
         lastFormElement={false}
       />
       <SurveyItem
-        question="Fourth question?"
+        question="ow many friend requests/tags have you made/accepted last month?"
         value={state.fourthInput}
         onChange={onChangeFourth}
-        placeholder={'Answer fourth'}
+        placeholder={'Answer here...'}
         lastFormElement={false}
       />
       <SurveyItem
-        question="Fifth question?"
+        question="How many times have you searched for something / clicked a link in the last month?"
         value={state.fifthInput}
         onChange={onChangeFifth}
-        placeholder={'Answer fifth'}
+        placeholder={'Answer here...'}
         lastFormElement={true}
       />
       <SolidButton
@@ -136,10 +136,14 @@ const LOCAL_STYLES = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLOR2,
   },
-
-  ITEM_CONTAINER: {},
+  ITEM_CONTAINER: {
+    marginTop: 10,
+    alignItems: 'center',
+    paddingHorizontal: 5,
+  },
   ITEM_TITLE: {
     color: 'COLOR5',
-    fontSize: 20,
+    fontSize: 15,
+    textAlign: 'center',
   },
 });

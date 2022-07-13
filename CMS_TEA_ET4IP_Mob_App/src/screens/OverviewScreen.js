@@ -66,7 +66,15 @@ export default ({navigation, route}) => {
             toggleModal(true);
           }}
         />
-        <SolidButton
+        <SmallButton
+          text="History"
+          style={{
+            marginHorizontal: 5,
+          }}
+          onPress={() => {}}
+        />
+      </View>
+      <SolidButton
           style={{
             marginHorizontal: 5,
           }}
@@ -78,8 +86,6 @@ export default ({navigation, route}) => {
             );
           }}
         />
-      </View>
-      <PrivacyBadge />
       <PopupModal
         visible={state.modalVisible}
         closeModal={() => {

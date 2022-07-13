@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Pressable} from 'react-native';
 import {widthPercentageToDP} from 'react-native-responsive-screen';
-import {COLOR3, COLOR4, COLOR5} from '../styles/colors';
+import {COLOR2, COLOR3, COLOR4, COLOR5} from '../styles/colors';
 
 export default ({text, onPress}) => {
   return (
@@ -15,14 +15,15 @@ const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     alignSelf: 'center',
     width: '80%',
-    height: 100,
+    paddingVertical: widthPercentageToDP('6%'),
+    paddingHorizontal: widthPercentageToDP('3%'),
     borderRadius: 10,
-    backgroundColor: 'COLOR3',
-    marginTop: 10,
+    backgroundColor: COLOR4,
+    marginTop: widthPercentageToDP('4%'),
   },
   ITEM_TEXT: {
     flex: 1,
-    fontSize: widthPercentageToDP('3%'),
-    color: COLOR5,
+    fontSize: widthPercentageToDP('4%'),
+    color: COLOR2,  
   },
 });

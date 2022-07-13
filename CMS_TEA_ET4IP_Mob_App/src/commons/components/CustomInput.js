@@ -82,7 +82,7 @@ const LOCAL_STYLES = StyleSheet.create({
     overflow: 'hidden',
     flexDirection: 'row',
     width: WP('90%'),
-    height: WP('15%'),
+    height: WP('12%'),
     borderRadius: WP('4%'),
     borderWidth: 1,
     borderColor: 'rgba(0,0,0,0)',

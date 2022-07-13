@@ -28,6 +28,9 @@ export default ({buttonList}) => {
 
   return (
     <FlatList
+      style={{
+        flexGrow: 0,
+      }}
       contentContainerStyle={LOCAL_STYLES.MAIN_CONTAINER}
       data={buttonList}
       horizontal
@@ -52,8 +55,11 @@ const LOCAL_STYLES = StyleSheet.create({
   MAIN_CONTAINER: {
     flex: 1,
     justifyContent: 'center',
+    paddingBottom: 20,
   },
-
+  FLATLIST_CONTAINER: {
+  height: 200,
+  },
   ACTIVE_BUTTON_STYLE: {
     backgroundColor: COLOR5,
   },
