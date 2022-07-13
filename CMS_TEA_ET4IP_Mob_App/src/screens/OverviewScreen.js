@@ -53,7 +53,7 @@ export default ({navigation, route}) => {
       />
       <LineChart data={route.params.data.LineDataTraces} />
       <SolidButton
-          text="Survey"
+          text="Enter your own values!"
           onPress={() => {
             navigation.navigate('SurveyScreen');
           }}
@@ -81,12 +81,12 @@ export default ({navigation, route}) => {
           }}
         />
       </View>
-      
+
       <SolidButton
           style={{
             marginHorizontal: 5,
           }}
-          text="Predictable Behaviour"
+          text="See Predictions from Traces!"
           onPress={() => {
             navigation.navigate('PredictionScreen', {
               data: route.params.data.PredictableBehaviors,

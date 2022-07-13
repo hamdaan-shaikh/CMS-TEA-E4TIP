@@ -10,6 +10,7 @@ export const MAIN_STYLES = {
 
 export const FONT_STYLES = {
   PAGE_TITLE: {
+    marginTop: 10,
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',
@@ -17,7 +18,8 @@ export const FONT_STYLES = {
   },
   PAGE_DESCRIPTION: {
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 16,
+    paddingHorizontal: 10,
     color: COLOR4,
   },
 };

@@ -1,6 +1,9 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {widthPercentageToDP} from 'react-native-responsive-screen';
+import {
+  heightPercentageToDP,
+  widthPercentageToDP,
+} from 'react-native-responsive-screen';
 import {VictoryBar, VictoryChart, Background} from 'victory-native';
 import {CustomVictoryTheme} from '../helpers/VictoryTheme';
 import {
@@ -24,6 +27,7 @@ export default ({data, withThreshold}) => {
           axisLabel: {fill: COLOR1},
           background: {fill: withThreshold ? '#f00' : undefined},
         }}
+        height={heightPercentageToDP('35%')}
         width={widthPercentageToDP('100%')}
         theme={CustomVictoryTheme}
         backgroundComponent={
@@ -54,6 +58,11 @@ export default ({data, withThreshold}) => {
           data={data}
           x="activity"
           y="score"
+                   domainPadding={{
+            x: 20,
+          }}         domainPadding={{
+            x: 20,
+          }}
           events={[
             {
               target: 'data',

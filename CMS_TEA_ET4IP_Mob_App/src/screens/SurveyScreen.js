@@ -148,7 +148,7 @@ export default ({navigation}) => {
                 marginTop: 50,
               },
             ]}>
-            New data
+            Privacy Overview from Survey
           </Text>
           <VictoryOverview
             data={[

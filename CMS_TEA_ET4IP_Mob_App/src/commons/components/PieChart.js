@@ -8,7 +8,9 @@ export default ({data, type}) => {
   return (
     <View style={styles.container}>
       <VictoryPie
+        padding={80}
         data={data}
+        width={400}
         x="activity"
         y="score"
         colorScale={
@@ -45,6 +47,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'COLOR2',
+    backgroundColor: 'COLOR1',
   },
 });
