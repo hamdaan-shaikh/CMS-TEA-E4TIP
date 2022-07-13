@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {widthPercentageToDP} from 'react-native-responsive-screen';
 import {VictoryPie, VictoryChart, VictoryTheme} from 'victory-native';
+import {COLOR1, COLOR2} from '../styles/colors';
 
 export default ({data, type}) => {
   return (
@@ -44,6 +45,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5fcff',
+    backgroundColor: 'COLOR2',
   },
 });

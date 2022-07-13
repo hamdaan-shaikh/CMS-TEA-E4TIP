@@ -20,8 +20,41 @@ export default props => {
       </Text>
       <BubbleChart
         data={[
-          {activity: 'None', score: 19000, onPress: () => {}},
-          {activity: 'Null', score: 1, onPress: () => {}},
+          {
+            activity: 1,
+            score: 200,
+            amount: 15,
+            text: 'Shopping',
+            onPress: () => {},
+          },
+          {
+            activity: 2,
+            score: 300,
+            amount: 20,
+            text: 'Festival/Concert',
+            onPress: () => {},
+          },
+          {
+            activity: 2.5,
+            score: 100,
+            amount: 20,
+            text: 'Videos',
+            onPress: () => {},
+          },
+          {
+            activity: 3.5,
+            score: 240,
+            amount: 14,
+            text: 'News/Articles',
+            onPress: () => {},
+          },
+          {
+            activity: 4,
+            score: 100,
+            amount: 10,
+            text: 'Food/Recipe',
+            onPress: () => {},
+          },
         ]}
       />
     </View>
