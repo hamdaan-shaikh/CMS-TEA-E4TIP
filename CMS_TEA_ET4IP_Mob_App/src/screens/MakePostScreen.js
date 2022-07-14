@@ -53,9 +53,9 @@ export default ({navigation, route}) => {
         closeModal={() => {
           toggleModal(false);
         }}
-        onPressConfirm={() => {
-          navigation.navigate('PredictionScreen');
-        }}
+        //onPressConfirm={() => {
+          //navigation.navigate('PredictionScreen');
+        //}}
         cancelText="No">
         <Text style={LOCAL_STYLES.MODAL_TEXT}>
           Are you sure you would like to share your location?

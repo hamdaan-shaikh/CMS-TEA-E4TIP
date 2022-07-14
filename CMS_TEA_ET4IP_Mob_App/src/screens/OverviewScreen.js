@@ -75,12 +75,12 @@ export default ({navigation, route}) => {
           style={{
             marginHorizontal: 5,
           }}
-          onPress={() => {
-            navigation.navigate(
-              'HistoryScreen',
-              route.data.PredictableBehaviors,
-            );
-          }}
+          //onPress={() => {
+            //navigation.navigate(
+              //'HistoryScreen',
+              //route.data.PredictableBehaviors,
+            //);
+          //}}
         />
       </View>
 

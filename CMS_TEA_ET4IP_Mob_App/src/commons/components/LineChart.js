@@ -28,7 +28,7 @@ export default ({data}) => {
         }}
         height={heightPercentageToDP('35%')}
         width={widthPercentageToDP('100%')}
-        theme={VictoryTheme.material}>
+        theme={CustomVictoryTheme}>
         {Object.keys(data[0].traces).map((item, index) => (
           <VictoryLine
             style={{
