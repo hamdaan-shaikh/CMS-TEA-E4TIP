@@ -11,9 +11,9 @@ const third = Image.resolveAssetSource(ThirdPlace).uri;
 
 const getImage = position => {
   if (position === 0) {
-    return {uri: first};
-  } else if (position === 1) {
     return {uri: second};
+  } else if (position === 1) {
+    return {uri: first};
   } else if (position === 2) {
     return {uri: third};
   }

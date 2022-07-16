@@ -9,7 +9,7 @@ import PredictionScreen from '../screens/PredictionScreen';
 import CorrespondingTracesScreen from '../screens/CorrespondingTracesScreen';
 import MakePostScreen from '../screens/MakePostScreen';
 import BubbleChartScreen from '../screens/BubbleChartScreen';
-import BarChartScreen from '../screens/MapScreen';
+import MapScreen from '../screens/MapScreen';
 import PieChartScreen from '../screens/PieChartScreen';
 import SurveyScreen from '../screens/SurveyScreen';
 import DetailedDataScreen from '../screens/DetailedDataScreen';
@@ -34,7 +34,7 @@ export default () => {
       <Stack.Screen name="PredictionScreen" component={PredictionScreen} />
       <Stack.Screen name="CorrespondingTracesScreen" component={CorrespondingTracesScreen} />
       <Stack.Screen name="MakePostScreen" component={MakePostScreen} />
-      <Stack.Screen name="BarChartScreen" component={BarChartScreen} />
+      <Stack.Screen name="MapScreen" component={MapScreen} />
       <Stack.Screen name="PieChartScreen" component={PieChartScreen} />
       <Stack.Screen name="BubbleChartScreen" component={BubbleChartScreen} />
       <Stack.Screen name="SurveyScreen" component={SurveyScreen} />
