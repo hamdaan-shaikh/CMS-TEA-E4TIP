@@ -31,7 +31,7 @@ export default ({data, withThreshold}) => {
         width={widthPercentageToDP('100%')}
         theme={CustomVictoryTheme}
         backgroundComponent={
-          withThreshold ? <Background y={'50%'} height={2} /> : undefined
+          withThreshold ? <Background y={'47%'} height={2} /> : undefined
         }>
         <VictoryBar
           style={{

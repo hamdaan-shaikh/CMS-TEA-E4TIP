@@ -35,15 +35,15 @@ export default ({data}) => {
               data: {
                 stroke:
                   index === 0
-                    ? GRAPH_COLOR1
+                    ? GRAPH_COLOR5
                     : index === 1
-                    ? GRAPH_COLOR2
+                    ? GRAPH_COLOR4
                     : index === 2
                     ? GRAPH_COLOR3
                     : index === 3
-                    ? GRAPH_COLOR4
+                    ? GRAPH_COLOR2
                     : index === 4
-                    ? GRAPH_COLOR5
+                    ? GRAPH_COLOR1
                     : GRAPH_COLOR1,
               },
             }}

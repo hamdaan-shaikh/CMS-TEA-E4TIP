@@ -6,7 +6,7 @@ import {SmallButton, SolidButton} from '../commons/components/Buttons';
 import {COLOR2} from '../commons/styles/colors';
 import {MultilineInput} from '../commons/components/CustomInput';
 
-const threshold = 10;
+const threshold = 8;
 
 export default ({navigation, route}) => {
   const [state, setState] = useState({
@@ -46,8 +46,21 @@ export default ({navigation, route}) => {
           toggleModal(true);
         }}
       />
-      <SolidButton text="Upload Photo" onPress={() => {}} />
-      <SolidButton text="Tag a Friend" onPress={() => {}} />
+      <SolidButton text="Upload Photo"
+        onPress={() => {
+          toggleModal(true);
+        }}
+      /> 
+      <SolidButton text="Tag a Friend"
+        onPress={() => {
+          toggleModal(true);
+        }}
+      />
+      <SmallButton text="Submit"
+        onPress={() => {
+          toggleModal(true);
+        }}
+      />  
       <CenterModal
         visible={state.modalVisible}
         closeModal={() => {

@@ -31,7 +31,7 @@ export default ({navigation, route}) => {
     <View style={LOCAL_STYLES.MAIN_CONTAINER}>
       <Text style={FONT_STYLES.PAGE_TITLE}>Privacy Overview</Text>
       <VictoryOverview
-        //withThreshold
+        withThreshold
         data={route.params.data.GraphInfo.map(item => ({
           activity: item.title,
           score: item.value,
